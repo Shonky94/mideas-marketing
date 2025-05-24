@@ -1,0 +1,7 @@
+perplexity_api_key: "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"
+input_folders:
+  instagram: "C:/Users/Admin/Desktop/Final/data/input/instagram"
+  facebook: "C:/Users/Admin/Desktop/Final/data/input/facebook"
+  youtube: "C:/Users/Admin/Desktop/Final/data/input/youtube"
+output_folder: "C:/Users/Admin/Desktop/Final/data/output"
+logs_folder: "C:/Users/Admin/Desktop/Final/logs"

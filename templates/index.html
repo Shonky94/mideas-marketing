@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Processing Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            font-weight: bold;
+            background-color: #f8f9fa;
+        }
+        .output-area {
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 10px;
+        }
+        .platform-column {
+            border-right: 1px solid #dee2e6;
+        }
+        .platform-column:last-child {
+            border-right: none;
+        }
+        .mapping-section {
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .results-area {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center">Social Media Data Processing Tool</h1>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-info alert-dismissible fade show">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <!-- YouTube Doc Section -->
+        <h2 class="section-title">Step 1: YouTube Channel Data Extraction</h2>
+        <div class="card">
+            <div class="card-header">Upload YouTube Channels Document</div>
+            <div class="card-body">
+                <form action="{{ url_for('upload_youtube_doc') }}" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="youtube_doc" class="form-label">Select Word document containing YouTube channels:</label>
+                        <input type="file" class="form-control" id="youtube_doc" name="youtube_doc" accept=".docx">
+                        <div class="form-text">Upload a .docx file with brand names and YouTube channel links.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload Document</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Run YouTube Data Extraction</div>
+            <div class="card-body">
+                <form action="{{ url_for('run_ytword') }}" method="post">
+                    <button type="submit" class="btn btn-success">Run Extraction</button>
+                    <div class="form-text">This will process the uploaded document and extract YouTube data.</div>
+                </form>
+                <div class="output-area" id="ytword-output">
+                    <p>Output will appear here...</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- File Upload Sections -->
+        <h2 class="section-title">Step 2: Upload Social Media Excel Files</h2>
+        
+        <div class="row">
+            <!-- YouTube Excel Upload -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">YouTube Excel</div>
+                    <div class="card-body">
+                        <form action="{{ url_for('upload_excel') }}" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="platform" value="youtube">
+                            <div class="mb-3">
+                                <label for="youtube_excel" class="form-label">Upload Excel file:</label>
+                                <input type="file" class="form-control" id="youtube_excel" name="excel_file" accept=".xlsx">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </form>
+                        <div class="mt-3" id="youtube-file-status">
+                            Not uploaded
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Facebook Excel Upload -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">Facebook Excel</div>
+                    <div class="card-body">
+                        <form action="{{ url_for('upload_excel') }}" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="platform" value="facebook">
+                            <div class="mb-3">
+                                <label for="facebook_excel" class="form-label">Upload Excel file:</label>
+                                <input type="file" class="form-control" id="facebook_excel" name="excel_file" accept=".xlsx">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </form>
+                        <div class="mt-3" id="facebook-file-status">
+                            Not uploaded
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instagram Excel Upload -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">Instagram Excel</div>
+                    <div class="card-body">
+                        <form action="{{ url_for('upload_excel') }}" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="platform" value="instagram">
+                            <div class="mb-3">
+                                <label for="instagram_excel" class="form-label">Upload Excel file:</label>
+                                <input type="file" class="form-control" id="instagram_excel" name="excel_file" accept=".xlsx">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </form>
+                        <div class="mt-3" id="instagram-file-status">
+                            Not uploaded
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sheet Mapping Section -->
+        <h2 class="section-title">Step 3: Sheet Mapping and Data Cleaning</h2>
+        <div class="mapping-section">
+            <form action="{{ url_for('run_sheet_mapping') }}" method="post">
+                <div class="row">
+                    <!-- YouTube Sheet Selection -->
+                    <div class="col-md-4 platform-column">
+                        <h4>YouTube</h4>
+                        <div class="mb-3">
+                            <label for="youtube_selected_sheet" class="form-label">Select Sheet:</label>
+                            <select class="form-select" id="youtube_selected_sheet" name="youtube_selected_sheet">
+                                <option value="">Select a sheet...</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Facebook Sheet Selection -->
+                    <div class="col-md-4 platform-column">
+                        <h4>Facebook</h4>
+                        <div class="mb-3">
+                            <label for="facebook_selected_sheet" class="form-label">Select Sheet:</label>
+                            <select class="form-select" id="facebook_selected_sheet" name="facebook_selected_sheet">
+                                <option value="">Select a sheet...</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Instagram Sheet Selection -->
+                    <div class="col-md-4 platform-column">
+                        <h4>Instagram</h4>
+                        <div class="mb-3">
+                            <label for="instagram_selected_sheet" class="form-label">Select Sheet:</label>
+                            <select class="form-select" id="instagram_selected_sheet" name="instagram_selected_sheet">
+                                <option value="">Select a sheet...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-lg btn-success">Process Selected Sheets</button>
+                </div>
+            </form>
+            
+            <div class="results-area" id="mapping-results">
+                <h5>Processing Results:</h5>
+                <div id="results-container">
+                    <p>Processing results will appear here...</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Processing Outputs -->
+        <h2 class="section-title">Processing Outputs</h2>
+        <div class="accordion" id="outputAccordion">
+            <!-- YouTube Output -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingYoutube">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseYoutube" aria-expanded="false" aria-controls="collapseYoutube">
+                        YouTube Processing Output
+                    </button>
+                </h2>
+                <div id="collapseYoutube" class="accordion-collapse collapse" aria-labelledby="headingYoutube" data-bs-parent="#outputAccordion">
+                    <div class="accordion-body">
+                        <div class="output-area" id="youtube_cleandata-output">
+                            <p>Output will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Facebook Output -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFacebook">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFacebook" aria-expanded="false" aria-controls="collapseFacebook">
+                        Facebook Processing Output
+                    </button>
+                </h2>
+                <div id="collapseFacebook" class="accordion-collapse collapse" aria-labelledby="headingFacebook" data-bs-parent="#outputAccordion">
+                    <div class="accordion-body">
+                        <div class="output-area" id="facebook_cleandata-output">
+                            <p>Output will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instagram Output -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingInstagram">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstagram" aria-expanded="false" aria-controls="collapseInstagram">
+                        Instagram Processing Output
+                    </button>
+                </h2>
+                <div id="collapseInstagram" class="accordion-collapse collapse" aria-labelledby="headingInstagram" data-bs-parent="#outputAccordion">
+                    <div class="accordion-body">
+                        <div class="output-area" id="instagram_cleandata-output">
+                            <p>Output will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to load sheet names
+        function loadSheets(platform) {
+            fetch(`/get_sheets/${platform}`)
+                .then(response => response.json())
+                .then(data => {
+                    const selectElement = document.getElementById(`${platform}_selected_sheet`);
+                    const statusElement = document.getElementById(`${platform}-file-status`);
+                    
+                    // Clear existing options
+                    selectElement.innerHTML = '<option value="">Select a sheet...</option>';
+                    
+                    if (data.sheets && data.sheets.length > 0) {
+                        data.sheets.forEach(sheet => {
+                            const option = document.createElement('option');
+                            option.value = sheet;
+                            option.textContent = sheet;
+                            selectElement.appendChild(option);
+                        });
+                        statusElement.innerHTML = `<span class="text-success">File uploaded with ${data.sheets.length} sheets</span>`;
+                    } else {
+                        statusElement.innerHTML = '<span class="text-warning">No sheets available</span>';
+                    }
+                })
+                .catch(error => {
+                    console.error(`Error loading ${platform} sheets:`, error);
+                    document.getElementById(`${platform}-file-status`).innerHTML = 
+                        '<span class="text-danger">Error loading sheets</span>';
+                });
+        }
+        
+        // Function to load output
+        function loadOutput(script) {
+            fetch(`/get_output/${script}`)
+                .then(response => response.json())
+                .then(data => {
+                    const outputElement = document.getElementById(`${script}-output`);
+                    if (outputElement) {
+                        outputElement.innerHTML = `<pre>${data.output || 'No output available'}</pre>`;
+                    }
+                })
+                .catch(error => console.error(`Error loading ${script} output:`, error));
+        }
+        
+        // Function to load mapping results
+        function loadMappingResults() {
+            fetch('/get_mapping_results')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsContainer = document.getElementById('results-container');
+                    if (data.results && data.results.length > 0) {
+                        let html = '<div class="row">';
+                        data.results.forEach(result => {
+                            html += `
+                                <div class="col-md-4 mb-3">
+                                    <div class="card ${result.success ? 'border-success' : 'border-danger'}">
+                                        <div class="card-header ${result.success ? 'bg-success text-white' : 'bg-danger text-white'}">
+                                            ${result.platform.toUpperCase()} - ${result.sheet}
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Status:</strong> ${result.success ? 'Success' : 'Failed'}</p>
+                                            <div class="output-area">
+                                                <pre>${result.output}</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        html += '</div>';
+                        resultsContainer.innerHTML = html;
+                    } else {
+                        resultsContainer.innerHTML = '<p>No processing results available yet.</p>';
+                    }
+                })
+                .catch(error => console.error('Error loading mapping results:', error));
+        }
+        
+        // Check for uploaded files and load data on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            ['youtube', 'facebook', 'instagram'].forEach(platform => {
+                loadSheets(platform);
+                loadOutput(`${platform}_cleandata`);
+            });
+            
+            loadOutput('ytword');
+            loadMappingResults();
+        });
+        
+        // Refresh sheet names after file upload
+        function setupFileStatusCheck() {
+            ['youtube', 'facebook', 'instagram'].forEach(platform => {
+                const inputElement = document.getElementById(`${platform}_excel`);
+                if (inputElement) {
+                    inputElement.addEventListener('change', () => {
+                        if (inputElement.files.length > 0) {
+                            document.getElementById(`${platform}-file-status`).innerHTML = 
+                                '<span class="text-info">File selected, uploading...</span>';
+                        }
+                    });
+                }
+            });
+        }
+        
+        setupFileStatusCheck();
+    </script>
+</body>
+</html>

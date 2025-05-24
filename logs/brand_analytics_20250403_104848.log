@@ -1,0 +1,171 @@
+2025-04-03 10:48:48,901 - BrandAnalytics - INFO - Loaded configuration from C:\Users\Admin\Desktop\Final\config\config.yaml
+2025-04-03 10:48:48,903 - BrandAnalytics - INFO - Processing files: 
+Instagram: C:\Users\Admin\Desktop\Final\data\input\instagram\others-competitor-readytobemomofficial-December-2024-67ebd04b0109e.xlsx
+Facebook: C:\Users\Admin\Desktop\Final\data\input\facebook\others-competitor-ReadyToBeMomOfficial-December-2024-67ea644501927.xlsx
+YouTube: C:\Users\Admin\Desktop\Final\data\input\youtube\youtube_data.xlsx
+2025-04-03 10:48:49,247 - BrandAnalytics - INFO - Found 4 brands: SBI, Union Bank, HDFC Bank, Competitors overview
+2025-04-03 10:48:49,249 - BrandAnalytics - INFO - Processing brand: SBI
+2025-04-03 10:48:49,250 - BrandAnalytics - INFO - Generating Instagram report for SBI...
+2025-04-03 10:48:49,250 - BrandAnalytics - INFO - Processing brand: Union Bank
+2025-04-03 10:48:49,250 - BrandAnalytics - INFO - Processing brand: HDFC Bank
+2025-04-03 10:48:49,250 - BrandAnalytics - INFO - Generating Instagram report for Union Bank...
+2025-04-03 10:48:49,251 - BrandAnalytics - INFO - Generating Instagram report for HDFC Bank...
+2025-04-03 10:48:49,498 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:48:49,499 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61b8128953ae5',t:'MTc0MzY1NzUyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:48:49,500 - BrandAnalytics - ERROR - Failed to generate Instagram report for HDFC Bank.
+2025-04-03 10:48:49,500 - BrandAnalytics - INFO - Generating Facebook report for HDFC Bank...
+2025-04-03 10:48:49,519 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:48:49,520 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61b812fef47db',t:'MTc0MzY1NzUyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:48:49,520 - BrandAnalytics - ERROR - Failed to generate Instagram report for SBI.
+2025-04-03 10:48:49,521 - BrandAnalytics - INFO - Generating Facebook report for SBI...
+2025-04-03 10:48:49,523 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:48:49,524 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61b812d4f3b43',t:'MTc0MzY1NzUyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:48:49,525 - BrandAnalytics - ERROR - Failed to generate Instagram report for Union Bank.
+2025-04-03 10:48:49,525 - BrandAnalytics - INFO - Generating Facebook report for Union Bank...
+2025-04-03 10:48:49,527 - BrandAnalytics - INFO - Rate limit reached. Waiting 60.73 seconds...
+2025-04-03 10:48:49,735 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:48:49,736 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61b829fed8d2f',t:'MTc0MzY1NzUyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:48:49,739 - BrandAnalytics - ERROR - Failed to generate Facebook report for HDFC Bank.
+2025-04-03 10:48:49,740 - BrandAnalytics - INFO - Generating YouTube report for HDFC Bank...
+2025-04-03 10:48:49,746 - BrandAnalytics - INFO - Rate limit reached. Waiting 60.51 seconds...
+2025-04-03 10:48:49,748 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:48:49,748 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61b82b94d3d4e',t:'MTc0MzY1NzUyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:48:49,749 - BrandAnalytics - ERROR - Failed to generate Facebook report for SBI.
+2025-04-03 10:48:49,749 - BrandAnalytics - INFO - Generating YouTube report for SBI...
+2025-04-03 10:48:49,750 - BrandAnalytics - INFO - Rate limit reached. Waiting 60.50 seconds...
+2025-04-03 10:49:50,499 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:49:50,501 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61cfe58dd3ddf',t:'MTc0MzY1NzU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:49:50,502 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:49:50,504 - BrandAnalytics - ERROR - Failed to generate YouTube report for HDFC Bank.
+2025-04-03 10:49:50,505 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61cfe5fbb445b',t:'MTc0MzY1NzU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:49:50,506 - BrandAnalytics - INFO - Merging reports for HDFC Bank...
+2025-04-03 10:49:50,509 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:49:50,510 - BrandAnalytics - ERROR - Failed to generate YouTube report for SBI.
+2025-04-03 10:49:50,511 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61cfe5a584413',t:'MTc0MzY1NzU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:49:50,512 - BrandAnalytics - INFO - Merging reports for SBI...
+2025-04-03 10:49:50,512 - BrandAnalytics - ERROR - Failed to generate Facebook report for Union Bank.
+2025-04-03 10:49:50,512 - BrandAnalytics - INFO - Merged report for HDFC Bank completed and saved.
+2025-04-03 10:49:50,513 - BrandAnalytics - INFO - Generating YouTube report for Union Bank...
+2025-04-03 10:49:50,513 - BrandAnalytics - INFO - Processing brand: Competitors overview
+2025-04-03 10:49:50,514 - BrandAnalytics - INFO - Successfully processed HDFC Bank
+2025-04-03 10:49:50,515 - BrandAnalytics - WARNING - No YouTube data found for brand Competitors overview
+2025-04-03 10:49:50,516 - BrandAnalytics - INFO - Generating Instagram report for Competitors overview...
+2025-04-03 10:49:50,516 - BrandAnalytics - INFO - Merged report for SBI completed and saved.
+2025-04-03 10:49:50,517 - BrandAnalytics - INFO - Successfully processed SBI
+2025-04-03 10:49:50,747 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:49:50,748 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:49:50,748 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61cffeab048d1',t:'MTc0MzY1NzU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:49:50,749 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61cffea8f3e0f',t:'MTc0MzY1NzU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:49:50,749 - BrandAnalytics - ERROR - Failed to generate YouTube report for Union Bank.
+2025-04-03 10:49:50,750 - BrandAnalytics - ERROR - Failed to generate Instagram report for Competitors overview.
+2025-04-03 10:49:50,750 - BrandAnalytics - INFO - Merging reports for Union Bank...
+2025-04-03 10:49:50,750 - BrandAnalytics - INFO - Generating Facebook report for Competitors overview...
+2025-04-03 10:49:50,751 - BrandAnalytics - INFO - Rate limit reached. Waiting 60.50 seconds...
+2025-04-03 10:49:50,751 - BrandAnalytics - INFO - Merged report for Union Bank completed and saved.
+2025-04-03 10:49:50,752 - BrandAnalytics - INFO - Successfully processed Union Bank
+2025-04-03 10:50:51,485 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:50:51,486 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61e7b9ce03b15',t:'MTc0MzY1NzY1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:50:51,487 - BrandAnalytics - ERROR - Failed to generate Facebook report for Competitors overview.
+2025-04-03 10:50:51,488 - BrandAnalytics - INFO - Generating YouTube report for Competitors overview...
+2025-04-03 10:50:51,756 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:50:51,757 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61e7d0d25f2ce',t:'MTc0MzY1NzY1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:50:51,757 - BrandAnalytics - ERROR - Failed to generate YouTube report for Competitors overview.
+2025-04-03 10:50:51,757 - BrandAnalytics - INFO - Merging reports for Competitors overview...
+2025-04-03 10:50:51,759 - BrandAnalytics - INFO - Merged report for Competitors overview completed and saved.
+2025-04-03 10:50:51,759 - BrandAnalytics - INFO - Successfully processed Competitors overview
+2025-04-03 10:50:51,759 - BrandAnalytics - INFO - Generating comparative report for all brands...
+2025-04-03 10:50:51,977 - BrandAnalytics - ERROR - Error querying Perplexity API: 401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions
+2025-04-03 10:50:51,978 - BrandAnalytics - ERROR - Response text: <html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>openresty/1.27.4</center>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92a61e7eaca7482c',t:'MTc0MzY1NzY1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+2025-04-03 10:50:51,980 - BrandAnalytics - ERROR - Failed to generate comparative brand analysis.
+2025-04-03 10:50:51,981 - BrandAnalytics - WARNING - Processing completed with some errors.

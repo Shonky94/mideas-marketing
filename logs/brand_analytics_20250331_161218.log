@@ -1,0 +1,7 @@
+2025-03-31 16:12:18,617 - BrandAnalytics - INFO - Loaded configuration from C:\Users\Admin\Desktop\Final\config\config.yaml
+2025-03-31 16:12:18,619 - BrandAnalytics - INFO - Processing files: 
+Instagram: C:\Users\Admin\Desktop\Final\data\input\instagram\others-competitor-readytobemomofficial-December-2024-67ea644a7df77.xlsx
+Facebook: C:\Users\Admin\Desktop\Final\data\input\facebook\others-competitor-ReadyToBeMomOfficial-December-2024-67ea644501927.xlsx
+YouTube: C:\Users\Admin\Desktop\Final\data\input\youtube\youtube_data.xlsx
+2025-03-31 16:12:18,983 - BrandAnalytics - INFO - Found 0 brands: 
+2025-03-31 16:12:18,983 - BrandAnalytics - ERROR - No brands found in the Instagram data. Aborting.
